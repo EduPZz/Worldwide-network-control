@@ -31,6 +31,7 @@ canvas.addEventListener('mousemove', (event) => {
   if (isDragging) {
     panDeltaX = panStartX + event.clientX - lastX;
     panDeltaY = panStartY + event.clientY - lastY;
+
     map.style.transform = `translate(${panDeltaX}px, ${panDeltaY}px) scale(${scale})`;
   }
 });

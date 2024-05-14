@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>World Map</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="canvas">
       <svg
         mapsvg:geoViewBox="-169.110266 83.600842 190.486279 -58.508473"
         width="1009.6727"
@@ -1294,7 +1285,3 @@
           id="ZW"
         />
       </svg>
-    </div>
-    <script src="script.js"></script>
-  </body>
-</html>
