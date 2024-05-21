@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #01171b;
+}
+
+h1 {
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+#state-selector-modal {
+  position: fixed;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+}
+
+#modal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#modal-container li {
+  list-style: none;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color, color 500ms;
+  cursor: pointer;
+}
+
+#modal-container li:hover {
+  background-color: #7b7b7b2f;
+  color: #262626;
+}
+
+
+#modal-container button {
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 500ms;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+#modal-container button:hover {
+  background-color: #616161;
+}
+
+
+#state-selector-modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+#canvas {
+  width: 80vw;
+  height: 80vh;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  border: solid 1px white;
+  cursor: grab;
+}
+
+#canvas svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+svg path {
+  fill: rgb(22, 54, 52);
+  stroke: #eee;
+  stroke-width: .25;
+}
+
+#BR {
+  fill: lightgreen;
+}
+
+#BR:hover {
+  fill: rgb(61, 143, 50);
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  #state-selector-modal {
+    width: 50%;
+  }
+}

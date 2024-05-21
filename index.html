@@ -6,6 +6,26 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    
+    <dialog id="state-selector-modal">
+      <div id="modal-container">
+        <h2>Selecionar estado</h2>
+        <p>Selecione estado (filal) para visualizar a rede</p>
+        <ul>
+          <li>
+            São Paulo
+          </li>
+          <li>
+            Rio de Janeiro
+          </li>
+        </ul>
+        <button id="close-modal">fechar</button>
+      </div>
+    </dialog>
+    
+    <h1>
+      Empresa
+    </h1>
     <div id="canvas">
       <svg
         mapsvg:geoViewBox="-169.110266 83.600842 190.486279 -58.508473"
@@ -1295,6 +1315,7 @@
         />
       </svg>
     </div>
-    <script src="../dist/bundle.js"></script>
+    <script src="/index.js"></script>
+    <script src="/modal.js"></script>
   </body>
 </html>
