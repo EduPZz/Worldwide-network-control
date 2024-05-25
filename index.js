@@ -1,5 +1,5 @@
-const canvas = document.getElementById('canvas');
-const map = document.getElementById('map');
+const canvas = document.getElementById("canvas");
+const map = document.getElementById("map");
 
 let scale = 1;
 let isDragging = false;
@@ -9,6 +9,14 @@ let panStartX = 0;
 let panStartY = 0;
 let panDeltaX = 0;
 let panDeltaY = 0;
+
+const stopDraggring = () => {
+  isDragging = false;
+};
+
+canvas.addEventListener("mouseleave", () => {
+  stopDraggring();
+});
 
 canvas.addEventListener('wheel', (event) => {
   event.preventDefault();
@@ -38,6 +46,6 @@ canvas.addEventListener('mousemove', (event) => {
 
 canvas.addEventListener('mouseup', () => {
   if (isDragging) {
-    isDragging = false;
+    stopDraggring();
   }
 });
