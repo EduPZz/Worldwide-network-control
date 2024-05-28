@@ -63,7 +63,7 @@ body {
     max-height: 90vh;
     display: grid;
     gap: 8px;
-    overflow: scroll;
+    overflow: auto;
     grid-template-columns: 1fr 1fr;
 }
 
@@ -78,4 +78,3 @@ body {
     max-height: 10vh;
     border-radius: 8px;
 }
-
