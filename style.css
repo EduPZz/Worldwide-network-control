@@ -8,12 +8,14 @@ body {
   background-color: #01171b;
 }
 
-h1 {
+#header {
   color: white;
   width: 100%;
   text-align: center;
   margin: 8px 0px;
+  align-items: center;
 }
+
 
 #state-selector-modal {
   position: fixed;
@@ -104,6 +106,12 @@ svg path {
   cursor: pointer;
 }
 
+#description {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media screen and (max-width: 480px) {
   #state-selector-modal {
