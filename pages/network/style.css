@@ -51,13 +51,22 @@ body {
 }
 
 .ip-info {
-    display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
+#components {
+    max-height: 90vh;
+    display: grid;
+    gap: 8px;
+    overflow: scroll;
+    grid-template-columns: 1fr 1fr;
+}
+
 .component {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .ip-info .component img {

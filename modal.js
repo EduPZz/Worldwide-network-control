@@ -8,12 +8,11 @@ let stateList = document.getElementById('state-list');
 
 
 const states = {
-	'BR': ['São Paulo', 'Rio de Janeiro'],
-	'US': ['Nova York'],
-	'GB': ['England'],
-	'JP': ['Tokyo']
+	'BR': [{name: 'São Paulo', url: 'pages/network/BR/SP/index.html'}, {name: 'Rio de Janeiro', url: 'pages/network/BR/RJ/index.html'}],
+	'US': [{name: 'Nova York', url: 'pages/network/US/index.html'}],
+	'GB': [{name: 'Inglaterra', url: 'pages/network/GB/index.html'}],
+	'JP': [{name: 'Tokio', url: 'pages/network/JP/index.html'}]
 };
-
 
 const fillModal = (countryCode) => {
 	stateList.innerHTML = '';
@@ -21,11 +20,12 @@ const fillModal = (countryCode) => {
 	let stateArray = states[countryCode];
 
 	stateArray.forEach(state => {
+    let link = document.createElement('a');
 		let li = document.createElement('li');
-		let link = document.createElement('a');
-		li.textContent = state;
-		stateList.appendChild(li);
-		link.setAttribute('href', 'pages/network/GB/index.html')
+		link.appendChild(li);
+    li.textContent = state.name;
+    link.setAttribute('href', state.url);
+    stateList.appendChild(link);
 	});
 }
 
@@ -44,10 +44,10 @@ br.addEventListener('click', () => {
 	modal.showModal();
   });
   
-  jp.addEventListener('click', () => {
-	fillModal('JP');
-	modal.showModal();
-  });
+  // jp.addEventListener('click', () => {
+	// fillModal('JP');
+	// modal.showModal();
+  // });
   
   fecharModal.addEventListener('click', () => {
 	modal.close();
