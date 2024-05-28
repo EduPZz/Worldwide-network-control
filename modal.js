@@ -10,8 +10,7 @@ let stateList = document.getElementById('state-list');
 const states = {
 	'BR': [{name: 'São Paulo', url: 'pages/network/BR/SP/index.html'}, {name: 'Rio de Janeiro', url: 'pages/network/BR/RJ/index.html'}],
 	'US': [{name: 'Nova York', url: 'pages/network/US/index.html'}],
-	'GB': [{name: 'Inglaterra', url: 'pages/network/GB/index.html'}],
-	'JP': [{name: 'Tokio', url: 'pages/network/JP/index.html'}]
+	'GB': [{name: 'Inglaterra', url: 'pages/network/GB/index.html'}]
 };
 
 const fillModal = (countryCode) => {
@@ -43,11 +42,6 @@ br.addEventListener('click', () => {
 	fillModal('GB');
 	modal.showModal();
   });
-  
-  // jp.addEventListener('click', () => {
-	// fillModal('JP');
-	// modal.showModal();
-  // });
   
   fecharModal.addEventListener('click', () => {
 	modal.close();
